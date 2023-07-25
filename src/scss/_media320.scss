@@ -1,0 +1,177 @@
+@media screen and (max-width: 700px) {
+    body {
+        background-color: rgb(117, 117, 117);
+        background-image: url('../../src/images/purpleLight.png'), url('../../src/images/noise.png'), url('../../src/images/redLight.png'), url('../../src/images/purpleball2.png'), url('../../src/images/redball2.png'), url('../../src/images/glass.png');
+        background-repeat: no-repeat;
+        background-position: 1% 10%, center, 67% 20%, 95% 27%, 5% 41%, center;
+        background-size: auto, 100% 100%, auto, auto, auto, 100% 100%;
+        animation: mover 15s ease-in-out infinite alternate;;
+    }
+    @keyframes mover {
+        from { background-position: 1% 10%, center, 67% 20%, 95% 27%, 5% 41%, center }
+        100% { background-position: 1% 10%, center, 67% 20%, 95% 12%, 5% 30%, center }
+    }
+    .container {
+        max-width: 288px;
+    }
+    header {
+        padding: 20px 0;
+        background-color: $bgBlack;
+        .container {
+            .logo {
+                display: none;
+            }
+            .nav {
+                margin-top: 0;
+                width: 100%;
+                .nav__ul {
+                    .nav__li {
+                        padding: 0;
+                        .nav__a {
+                            text-transform: uppercase;
+                            font-size: 0.75rem;
+                        }
+                    }
+                    .nav__li:last-child {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        padding-top: 40px;
+        padding-bottom: 59px;
+        .container {
+            flex-direction: column;
+            .greetings {
+                max-width: 272px;
+                .greetings__h1 {
+                    font-size: 2.25rem;
+                    margin: 0;
+                }
+                .greetings__p {
+                    margin-top: 15px;
+                    margin-bottom: 0;
+                }
+            }
+    
+            .description {
+                max-width: 272px;
+                text-align: left;
+                padding-top: 45px;
+                .description__h2 {
+                    letter-spacing: 0;
+                    margin: 0 0 20px;
+                    text-transform: none;
+                }
+                .description__gifts {
+                    flex-direction: column-reverse;
+                    .description__section:first-child, .description__section:last-child {
+                        display: none;
+                    }
+                    .description__section {
+                        display: flex;
+                        max-width: 100%;
+                        .description__h3 {
+                            font-family: $montserratLight;
+                            font-weight: 400;
+                            font-size: 0.8125rem;
+                            margin: 0;
+                            white-space: nowrap;
+                        }
+                        .description__h3::before, .description__h3::after {
+                            content: url('../../src/images/line.png');
+                            margin-right: 5px;
+                            margin-bottom: 5px;
+                            bottom: 3px;
+                            position: relative;
+                        }
+                        .description__p {
+                            font-size: 0;
+                            font-family: $montserratLight;
+                            font-weight: 400;
+                            margin: 0;
+                        }
+                    }
+                    .description__section:nth-child(3) {
+                        margin: 0 0 14px;
+                        .description__h3::after {
+                            margin-left: 10px;
+                        }
+                        .description__p::after {
+                            font-size: 0.8125rem;
+                            text-transform: uppercase;
+                            content: '30 виджетов';
+                        }
+                    }
+                    .description__section:nth-child(2) {
+                        .description__h3::after {
+                            margin-left: 15px;
+                        }
+                        .description__p::after {
+                            font-size: 0.8125rem;
+                            text-transform: uppercase;
+                            content: 'Месяц аmoCRM';
+                        }
+                    }
+                }
+                .description__btn {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    footer {
+        padding-top: 45px;
+        background-color: $bgBlack;
+        .container {
+            .footer__info {
+                flex-direction: column;
+                .footer__nav {                   
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    .footer__section {
+                    padding: 0;
+                    margin: 0;
+                    width: 100%;
+                    }
+                    .footer__section:nth-child(2) {
+                        max-width: 116px;
+                        margin-top: 30px;
+                    }
+                    .footer__section:nth-child(3) {
+                        margin-top: 56px;
+                        max-width: 128px;
+                        .footer__ul {
+                            display: flex;
+                            flex-direction: column;
+                            .footer__li:nth-child(2) {
+                                order: -1;
+                                .footer__a {
+                                    font-size: 0;
+                                }
+                                .footer__a::after {
+                                    font-size: 14px;
+                                    content: 'Благодарность клиентов'
+                                }
+                            }
+                        }
+                    }
+                }
+                .footer__contacts {
+                    .footer__section {
+                        margin-top: 30px;
+                        text-align: left;
+                    }
+                }
+            }
+            .footer__policy {
+                text-align: left;
+            }
+        }
+    }
+}
