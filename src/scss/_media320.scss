@@ -15,7 +15,9 @@
         max-width: 288px;
     }
     header {
-        padding: 20px 0;
+        position: fixed;
+        width: 100%;
+        padding: 15px 0;
         background-color: $bgBlack;
         .container {
             .logo {
@@ -41,7 +43,7 @@
     }
 
     main {
-        padding-top: 40px;
+        padding-top: 88px;
         padding-bottom: 59px;
         .container {
             flex-direction: column;
@@ -50,21 +52,27 @@
                 .greetings__h1 {
                     font-size: 2.25rem;
                     margin: 0;
+                    line-height: 117%;
+                    letter-spacing: -0.085rem;
                 }
                 .greetings__p {
                     margin-top: 15px;
                     margin-bottom: 0;
+                    letter-spacing: -0.04rem;
                 }
             }
     
             .description {
                 max-width: 272px;
                 text-align: left;
-                padding-top: 45px;
+                padding-top: 39px;
                 .description__h2 {
-                    letter-spacing: 0;
-                    margin: 0 0 20px;
+                    letter-spacing: -0.04rem;
+                    margin: 0 0 17px;
                     text-transform: none;
+                    .description__span {
+                        letter-spacing: -0.04rem;
+                    }
                 }
                 .description__gifts {
                     flex-direction: column-reverse;
@@ -80,6 +88,7 @@
                             font-size: 0.8125rem;
                             margin: 0;
                             white-space: nowrap;
+                            letter-spacing: -0.01rem;
                         }
                         .description__h3::before, .description__h3::after {
                             content: url('../../src/images/line.png');
@@ -125,7 +134,8 @@
     }
 
     footer {
-        padding-top: 45px;
+        padding-top: 36px;
+        padding-bottom: 60px;
         background-color: $bgBlack;
         .container {
             .footer__info {
@@ -138,10 +148,22 @@
                     padding: 0;
                     margin: 0;
                     width: 100%;
+                    line-height: 85%;
+                    .footer__h3{
+                        font-size: 12px;
+                    }
+                    .footer__ul {
+                        .footer__li {
+                            .footer__a {
+                                font-size: 14px;
+                            }
+                        }
+                    }
                     }
                     .footer__section:nth-child(2) {
                         max-width: 116px;
-                        margin-top: 30px;
+                        margin-top: 34px;
+                        line-height: 90%;
                     }
                     .footer__section:nth-child(3) {
                         margin-top: 56px;
@@ -166,6 +188,15 @@
                     .footer__section {
                         margin-top: 30px;
                         text-align: left;
+                        line-height: 60%;
+                    .footer__h3{
+                        font-size: 12px;
+                    }
+                    .footer__ul {
+                        .footer__li {
+                            font-size: 14px;
+                        }
+                    }
                     }
                 }
             }
